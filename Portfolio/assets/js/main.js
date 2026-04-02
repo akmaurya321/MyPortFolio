@@ -1,10 +1,13 @@
+const root = document.documentElement;
 const header = document.getElementById("header");
 const navToggle = document.querySelector(".nav-toggle");
 const navMenu = document.getElementById("site-menu");
 const navLinks = document.querySelectorAll(".site-nav__link");
+const themeToggle = document.getElementById("theme-toggle");
 const revealItems = document.querySelectorAll(".reveal");
+const contactForm = document.getElementById("contact-form");
+const formStatus = document.getElementById("form-status");
 const copyButton = document.getElementById("copy-email");
-const copyStatus = document.getElementById("copy-status");
 const currentYear = document.getElementById("current-year");
 
 const fallbackCopyText = (value) => {
@@ -16,18 +19,40 @@ const fallbackCopyText = (value) => {
   document.body.appendChild(helper);
   helper.select();
 
-  const didCopy = document.execCommand("copy");
+  const copied = document.execCommand("copy");
   document.body.removeChild(helper);
-  return didCopy;
+  return copied;
+};
+
+const updateThemeLabel = (theme) => {
+  if (!themeToggle) return;
+  const nextTheme = theme === "dark" ? "light" : "dark";
+  themeToggle.setAttribute("aria-label", `Switch to ${nextTheme} mode`);
+  themeToggle.setAttribute("title", `Switch to ${nextTheme} mode`);
+};
+
+const setTheme = (theme) => {
+  root.dataset.theme = theme;
+  localStorage.setItem("portfolio-theme", theme);
+  updateThemeLabel(theme);
 };
 
 const closeMenu = () => {
   if (!navMenu || !navToggle) return;
-
   navMenu.classList.remove("is-open");
   navToggle.setAttribute("aria-expanded", "false");
   document.body.classList.remove("menu-open");
 };
+
+if (themeToggle) {
+  updateThemeLabel(root.dataset.theme || "dark");
+
+  themeToggle.addEventListener("click", () => {
+    const currentTheme = root.dataset.theme === "light" ? "light" : "dark";
+    const nextTheme = currentTheme === "dark" ? "light" : "dark";
+    setTheme(nextTheme);
+  });
+}
 
 if (navToggle && navMenu) {
   navToggle.addEventListener("click", () => {
@@ -41,14 +66,20 @@ if (navToggle && navMenu) {
   });
 
   window.addEventListener("resize", () => {
-    if (window.innerWidth >= 860) {
+    if (window.innerWidth >= 920) {
+      closeMenu();
+    }
+  });
+
+  window.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
       closeMenu();
     }
   });
 }
 
-const setActiveLink = () => {
-  const scrollPosition = window.scrollY + 140;
+const updateActiveLink = () => {
+  const scrollPosition = window.scrollY + 160;
 
   navLinks.forEach((link) => {
     const section = document.querySelector(link.getAttribute("href"));
@@ -61,12 +92,12 @@ const setActiveLink = () => {
   });
 
   if (header) {
-    header.classList.toggle("is-scrolled", window.scrollY > 16);
+    header.classList.toggle("is-scrolled", window.scrollY > 18);
   }
 };
 
-setActiveLink();
-window.addEventListener("scroll", setActiveLink);
+updateActiveLink();
+window.addEventListener("scroll", updateActiveLink, { passive: true });
 
 if (revealItems.length) {
   const revealObserver = new IntersectionObserver(
@@ -78,15 +109,23 @@ if (revealItems.length) {
       });
     },
     {
-      threshold: 0.2,
-      rootMargin: "0px 0px -60px 0px",
+      threshold: 0.18,
+      rootMargin: "0px 0px -40px 0px",
     },
   );
 
   revealItems.forEach((item) => revealObserver.observe(item));
 }
 
-if (copyButton && copyStatus) {
+if (contactForm && formStatus) {
+  contactForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    formStatus.textContent = "Thanks for reaching out. This form is ready to connect to a backend service when you want to make it live.";
+    contactForm.reset();
+  });
+}
+
+if (copyButton && formStatus) {
   copyButton.addEventListener("click", async () => {
     const email = copyButton.dataset.email;
     if (!email) return;
@@ -95,11 +134,12 @@ if (copyButton && copyStatus) {
       if (navigator.clipboard && window.isSecureContext) {
         await navigator.clipboard.writeText(email);
       } else if (!fallbackCopyText(email)) {
-        throw new Error("Fallback copy failed");
+        throw new Error("Copy failed");
       }
-      copyStatus.textContent = "Email copied. You can paste it anywhere.";
+
+      formStatus.textContent = "Email copied. You can paste it anywhere.";
     } catch (error) {
-      copyStatus.textContent = "Copy failed. Please use the email link instead.";
+      formStatus.textContent = "Copy failed. Please use the email link instead.";
     }
   });
 }

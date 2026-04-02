@@ -1,0 +1,721 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Arvind Kumar is a Computer Science student specializing in AI and ML, building modern Java, machine learning, and web experiences."
+    />
+    <link
+      rel="shortcut icon"
+      href="assets/img/favicon.png"
+      type="image/x-icon"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      (() => {
+        const savedTheme = localStorage.getItem("portfolio-theme");
+        if (savedTheme) {
+          document.documentElement.dataset.theme = savedTheme;
+        }
+        document.documentElement.classList.add("js");
+      })();
+    </script>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <title>Arvind Kumar | AI/ML Developer Portfolio</title>
+  </head>
+  <body>
+    <div class="page-orb page-orb--one" aria-hidden="true"></div>
+    <div class="page-orb page-orb--two" aria-hidden="true"></div>
+
+    <header class="site-header" id="header">
+      <div class="container nav-shell">
+        <a class="brand" href="#home" aria-label="Arvind Kumar home">
+          <span class="brand__mark">AK</span>
+          <span class="brand__text">Arvind Kumar</span>
+        </a>
+
+        <nav class="site-nav" id="site-menu" aria-label="Primary navigation">
+          <a class="site-nav__link" href="#home">Home</a>
+          <a class="site-nav__link" href="#about">About</a>
+          <a class="site-nav__link" href="#skills">Skills</a>
+          <a class="site-nav__link" href="#projects">Projects</a>
+          <a class="site-nav__link" href="#experience">Experience</a>
+          <a class="site-nav__link" href="#certifications">Certifications</a>
+          <a class="site-nav__link" href="#contact">Contact</a>
+        </nav>
+
+        <div class="nav-actions">
+          <button
+            class="theme-toggle"
+            type="button"
+            id="theme-toggle"
+            aria-label="Switch to light mode"
+            title="Toggle color theme"
+          >
+            <span class="theme-toggle__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path
+                  d="M12 3v2.5M12 18.5V21M4.93 4.93l1.77 1.77M17.3 17.3l1.77 1.77M3 12h2.5M18.5 12H21M4.93 19.07l1.77-1.77M17.3 6.7l1.77-1.77"
+                  stroke-linecap="round"
+                />
+                <circle cx="12" cy="12" r="4.25" />
+              </svg>
+            </span>
+          </button>
+
+          <button
+            class="nav-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="site-menu"
+            aria-label="Open navigation"
+          >
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero section" id="home">
+        <div class="container hero__grid">
+          <div class="hero__content reveal">
+            <p class="eyebrow">AI/ML Developer | Java Developer</p>
+            <h1 class="hero__title">Arvind Kumar</h1>
+            <p class="hero__tagline">
+              Computer Science student building AI products, dependable Java
+              solutions, and polished web experiences.
+            </p>
+            <p class="hero__description">
+              I enjoy turning ideas into practical projects that combine machine
+              learning, clean code, and user-focused design. My goal is to grow
+              into an engineer who can build intelligent systems that feel both
+              professional and useful.
+            </p>
+
+            <div class="hero__actions">
+              <a class="button" href="#projects">View Projects</a>
+              <a
+                class="button button--secondary"
+                href="assets/pdf/Arvind-Kumar-Resume.pdf"
+                download
+              >
+                Download Resume
+              </a>
+            </div>
+
+            <div class="hero__metrics">
+              <article class="metric-card glass-card reveal delay-1">
+                <span class="metric-card__value">250+</span>
+                <span class="metric-card__label">LeetCode problems solved</span>
+              </article>
+              <article class="metric-card glass-card reveal delay-2">
+                <span class="metric-card__value">AI + ML</span>
+                <span class="metric-card__label">Focused on intelligent products</span>
+              </article>
+              <article class="metric-card glass-card reveal delay-3">
+                <span class="metric-card__value">Java</span>
+                <span class="metric-card__label">Strong backend development interest</span>
+              </article>
+            </div>
+          </div>
+
+          <div class="hero__visual reveal delay-2">
+            <div class="hero-card glass-card">
+              <span class="hero-card__badge hero-card__badge--top">
+                Open to internships
+              </span>
+              <div class="hero-card__image">
+                <img
+                  src="assets/img/hero-arvind.png"
+                  alt="Portrait of Arvind Kumar"
+                />
+              </div>
+              <div class="hero-card__content">
+                <p class="hero-card__eyebrow">Current Focus</p>
+                <h2>AI/ML systems, Java development, and responsive UI work.</h2>
+                <p>
+                  Building student-level projects with a professional mindset:
+                  clean structure, modern design, and real-world use cases.
+                </p>
+              </div>
+              <span class="hero-card__badge hero-card__badge--bottom">
+                Java • ML • TensorFlow • Web
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="about">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow">About Me</p>
+            <h2>Passionate about AI, thoughtful coding, and building projects that solve real problems.</h2>
+            <p>
+              I am a Computer Science student specializing in Artificial
+              Intelligence and Machine Learning. I enjoy blending technical depth
+              with clean presentation so every project feels useful, modern, and
+              easy to understand.
+            </p>
+          </div>
+
+          <div class="about-grid">
+            <article class="about-panel glass-card reveal">
+              <h3>Who I Am</h3>
+              <p>
+                I am Arvind Kumar, an aspiring software engineer with a strong
+                interest in AI/ML, Java development, and modern frontend design.
+                I like projects that challenge me to think clearly and build with
+                purpose.
+              </p>
+            </article>
+
+            <article class="about-panel glass-card reveal delay-1">
+              <h3>My Goal</h3>
+              <p>
+                My goal is to become an engineer who can create intelligent
+                applications, contribute to product teams, and keep growing
+                through impactful internships and real-world development work.
+              </p>
+            </article>
+
+            <article class="about-panel glass-card reveal delay-2">
+              <h3>What I Love</h3>
+              <p>
+                I love AI, coding, and turning concepts into visual, interactive
+                experiences. Exploring machine learning models and bringing them
+                into usable interfaces is the kind of work that excites me most.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="skills">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Skills</p>
+            <h2>Core technical strengths across programming, AI/ML, web development, and tools.</h2>
+          </div>
+
+          <div class="skills-grid">
+            <article class="skill-card glass-card reveal">
+              <div class="skill-card__header">
+                <span class="icon-chip" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                    <path d="M8 8h8M8 12h5M8 16h8" stroke-linecap="round" />
+                    <rect x="4" y="4" width="16" height="16" rx="3" />
+                  </svg>
+                </span>
+                <div>
+                  <p class="card-kicker">Languages</p>
+                  <h3>Java and JavaScript</h3>
+                </div>
+              </div>
+
+              <div class="skill-list">
+                <div class="skill-item" style="--level: 92%">
+                  <div class="skill-item__meta">
+                    <span>Java</span>
+                    <span>92%</span>
+                  </div>
+                  <div class="progress-bar"><span></span></div>
+                </div>
+                <div class="skill-item" style="--level: 84%">
+                  <div class="skill-item__meta">
+                    <span>JavaScript</span>
+                    <span>84%</span>
+                  </div>
+                  <div class="progress-bar"><span></span></div>
+                </div>
+              </div>
+            </article>
+
+            <article class="skill-card glass-card reveal delay-1">
+              <div class="skill-card__header">
+                <span class="icon-chip" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                    <path
+                      d="M6 15c0-2.761 2.239-5 5-5h7M6 9c0-2.761 2.239-5 5-5h7M6 21c0-2.761 2.239-5 5-5h7"
+                      stroke-linecap="round"
+                    />
+                    <circle cx="6" cy="9" r="1.5" fill="currentColor" stroke="none" />
+                    <circle cx="6" cy="15" r="1.5" fill="currentColor" stroke="none" />
+                    <circle cx="6" cy="21" r="1.5" fill="currentColor" stroke="none" />
+                  </svg>
+                </span>
+                <div>
+                  <p class="card-kicker">AI / ML</p>
+                  <h3>ML, DL, and TensorFlow</h3>
+                </div>
+              </div>
+
+              <div class="skill-list">
+                <div class="skill-item" style="--level: 88%">
+                  <div class="skill-item__meta">
+                    <span>Machine Learning</span>
+                    <span>88%</span>
+                  </div>
+                  <div class="progress-bar"><span></span></div>
+                </div>
+                <div class="skill-item" style="--level: 79%">
+                  <div class="skill-item__meta">
+                    <span>Deep Learning</span>
+                    <span>79%</span>
+                  </div>
+                  <div class="progress-bar"><span></span></div>
+                </div>
+                <div class="skill-item" style="--level: 82%">
+                  <div class="skill-item__meta">
+                    <span>TensorFlow</span>
+                    <span>82%</span>
+                  </div>
+                  <div class="progress-bar"><span></span></div>
+                </div>
+              </div>
+            </article>
+
+            <article class="skill-card glass-card reveal delay-2">
+              <div class="skill-card__header">
+                <span class="icon-chip" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                    <path
+                      d="M5 8.5 12 4l7 4.5v7L12 20l-7-4.5v-7Z"
+                      stroke-linejoin="round"
+                    />
+                    <path d="M9 10.5h6M9 13.5h6" stroke-linecap="round" />
+                  </svg>
+                </span>
+                <div>
+                  <p class="card-kicker">Web</p>
+                  <h3>HTML, CSS, and JS</h3>
+                </div>
+              </div>
+
+              <div class="skill-list">
+                <div class="skill-item" style="--level: 95%">
+                  <div class="skill-item__meta">
+                    <span>HTML</span>
+                    <span>95%</span>
+                  </div>
+                  <div class="progress-bar"><span></span></div>
+                </div>
+                <div class="skill-item" style="--level: 90%">
+                  <div class="skill-item__meta">
+                    <span>CSS</span>
+                    <span>90%</span>
+                  </div>
+                  <div class="progress-bar"><span></span></div>
+                </div>
+                <div class="skill-item" style="--level: 84%">
+                  <div class="skill-item__meta">
+                    <span>JavaScript</span>
+                    <span>84%</span>
+                  </div>
+                  <div class="progress-bar"><span></span></div>
+                </div>
+              </div>
+            </article>
+
+            <article class="skill-card glass-card reveal delay-3">
+              <div class="skill-card__header">
+                <span class="icon-chip" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                    <path
+                      d="M7 7h10v10H7zM4 4l3 3M20 4l-3 3M4 20l3-3M20 20l-3-3"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </span>
+                <div>
+                  <p class="card-kicker">Tools</p>
+                  <h3>Git and GitHub</h3>
+                </div>
+              </div>
+
+              <div class="skill-list">
+                <div class="skill-item" style="--level: 86%">
+                  <div class="skill-item__meta">
+                    <span>Git</span>
+                    <span>86%</span>
+                  </div>
+                  <div class="progress-bar"><span></span></div>
+                </div>
+                <div class="skill-item" style="--level: 89%">
+                  <div class="skill-item__meta">
+                    <span>GitHub</span>
+                    <span>89%</span>
+                  </div>
+                  <div class="progress-bar"><span></span></div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="projects">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Projects</p>
+            <h2>Projects that combine machine learning, backend development, and modern presentation.</h2>
+          </div>
+
+          <div class="projects-grid">
+            <article class="project-card glass-card reveal">
+              <div class="project-card__image">
+                <img
+                  src="assets/img/projects-1.png"
+                  alt="Healthcare Disease Prediction System preview"
+                />
+              </div>
+              <div class="project-card__body">
+                <p class="project-card__type">Featured Project</p>
+                <h3>Healthcare Disease Prediction System</h3>
+                <p>
+                  A machine learning project focused on predicting diseases from
+                  healthcare data using preprocessing, model training, and
+                  intelligent analysis to support faster, more informed decisions.
+                </p>
+                <div class="tag-list" aria-label="Healthcare tech stack">
+                  <span>Python</span>
+                  <span>Machine Learning</span>
+                  <span>Deep Learning</span>
+                  <span>TensorFlow</span>
+                </div>
+                <div class="project-card__links">
+                  <a
+                    class="button"
+                    href="https://your-demo-link.com/healthcare-disease-prediction"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Live Demo
+                  </a>
+                  <a
+                    class="button button--secondary"
+                    href="https://github.com/your-username/healthcare-disease-prediction"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    GitHub
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card glass-card reveal delay-1">
+              <div class="project-card__image">
+                <img
+                  src="assets/img/projects-4.png"
+                  alt="Intelligent teaching assistant project preview"
+                />
+              </div>
+              <div class="project-card__body">
+                <p class="project-card__type">Academic Build</p>
+                <h3>Programmable Digital Teacher System</h3>
+                <p>
+                  A concept-driven academic system combining Java and AI ideas to
+                  create an intelligent digital teaching assistant for learning
+                  support, automation, and smart classroom workflows.
+                </p>
+                <div class="tag-list" aria-label="Teaching system tech stack">
+                  <span>Java</span>
+                  <span>Spring Boot</span>
+                  <span>Python</span>
+                  <span>AI Integration</span>
+                </div>
+                <div class="project-card__links">
+                  <a
+                    class="button"
+                    href="https://your-demo-link.com/digital-teacher-system"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Live Demo
+                  </a>
+                  <a
+                    class="button button--secondary"
+                    href="https://github.com/your-username/digital-teacher-system"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    GitHub
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card glass-card reveal delay-2">
+              <div class="project-card__image">
+                <img
+                  src="assets/img/projects-3.png"
+                  alt="Portfolio analytics dashboard preview"
+                />
+              </div>
+              <div class="project-card__body">
+                <p class="project-card__type">Frontend + Data Storytelling</p>
+                <h3>Student Progress Analytics Dashboard</h3>
+                <p>
+                  A responsive dashboard idea for visualizing coding practice,
+                  learning milestones, and technical growth with clean UI patterns
+                  and data-focused storytelling.
+                </p>
+                <div class="tag-list" aria-label="Dashboard tech stack">
+                  <span>HTML</span>
+                  <span>CSS</span>
+                  <span>JavaScript</span>
+                  <span>Charts</span>
+                </div>
+                <div class="project-card__links">
+                  <a
+                    class="button"
+                    href="https://your-demo-link.com/student-analytics-dashboard"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Live Demo
+                  </a>
+                  <a
+                    class="button button--secondary"
+                    href="https://github.com/your-username/student-analytics-dashboard"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    GitHub
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="experience">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Experience / Achievements</p>
+            <h2>Growing through hands-on practice, academic consistency, and technical curiosity.</h2>
+          </div>
+
+          <div class="experience-grid">
+            <div class="timeline glass-card reveal">
+              <article class="timeline__item">
+                <span class="timeline__year">2023 - Present</span>
+                <h3>B.Tech in Computer Science with AI/ML Specialization</h3>
+                <p>
+                  Studying core computer science subjects while building depth in
+                  artificial intelligence, machine learning, and practical software
+                  development.
+                </p>
+              </article>
+
+              <article class="timeline__item">
+                <span class="timeline__year">Project Experience</span>
+                <h3>AI/ML and Java-Focused Development</h3>
+                <p>
+                  Building academic and personal projects that combine Java,
+                  frontend development, and intelligent systems with an emphasis
+                  on clarity, usability, and problem solving.
+                </p>
+              </article>
+            </div>
+
+            <div class="achievement-grid">
+              <article class="achievement-card glass-card reveal delay-1">
+                <p class="card-kicker">Coding</p>
+                <h3>250+ LeetCode Problems</h3>
+                <p>
+                  Consistent problem-solving practice across algorithms, data
+                  structures, and coding interview patterns.
+                </p>
+              </article>
+
+              <article class="achievement-card glass-card reveal delay-2">
+                <p class="card-kicker">Recognition</p>
+                <h3>Certification-Driven Learning</h3>
+                <p>
+                  Strengthening AI and data foundations through Oracle AI and Data
+                  Science certifications alongside academic learning.
+                </p>
+              </article>
+
+              <article class="achievement-card glass-card reveal delay-3">
+                <p class="card-kicker">Academics</p>
+                <h3>CGPA Highlight</h3>
+                <p>
+                  Add your latest CGPA here to keep the portfolio aligned with
+                  your most recent semester performance.
+                </p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="certifications">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Certifications</p>
+            <h2>Credentials that support my interest in AI, data science, and continuous learning.</h2>
+          </div>
+
+          <div class="certifications-grid">
+            <article class="certification-card glass-card reveal">
+              <span class="icon-chip" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <path d="M12 3 4 7v6c0 5 3.5 7.5 8 8 4.5-.5 8-3 8-8V7l-8-4Z" />
+                  <path d="m9.5 12 1.7 1.7 3.3-3.7" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </span>
+              <p class="card-kicker">Oracle</p>
+              <h3>Oracle AI Certification</h3>
+              <p>
+                Demonstrates growing knowledge of AI concepts, foundational
+                tools, and the practical thinking needed for intelligent product
+                development.
+              </p>
+            </article>
+
+            <article class="certification-card glass-card reveal delay-1">
+              <span class="icon-chip" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <path d="M4 18h16M7 15V9M12 15V6M17 15v-3" stroke-linecap="round" />
+                  <rect x="3" y="4" width="18" height="16" rx="3" />
+                </svg>
+              </span>
+              <p class="card-kicker">Data Science</p>
+              <h3>Data Science Certification</h3>
+              <p>
+                Highlights a foundation in data handling, analysis, and
+                model-oriented thinking that supports AI/ML project execution.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="contact">
+        <div class="container contact-grid">
+          <div class="contact-copy reveal">
+            <p class="eyebrow">Contact</p>
+            <h2>Let’s build something meaningful together.</h2>
+            <p>
+              I’m open to internships, collaborations, and opportunities where I
+              can contribute to AI/ML, Java, or frontend-focused projects.
+            </p>
+
+            <div class="contact-cards">
+              <article class="contact-card glass-card">
+                <p class="card-kicker">Email</p>
+                <a href="mailto:arvindg12125@gmail.com">arvindg12125@gmail.com</a>
+              </article>
+              <article class="contact-card glass-card">
+                <p class="card-kicker">LinkedIn</p>
+                <a
+                  href="https://www.linkedin.com/in/arvind-kumar-maurya12125/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  linkedin.com/in/arvind-kumar-maurya12125
+                </a>
+              </article>
+              <article class="contact-card glass-card">
+                <p class="card-kicker">GitHub</p>
+                <a
+                  href="https://github.com/your-username"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  github.com/your-username
+                </a>
+              </article>
+            </div>
+          </div>
+
+          <div class="contact-form-wrap glass-card reveal delay-1">
+            <form class="contact-form" id="contact-form">
+              <div class="form-row">
+                <label for="name">Name</label>
+                <input id="name" name="name" type="text" placeholder="Your name" required />
+              </div>
+
+              <div class="form-row">
+                <label for="email">Email</label>
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  placeholder="your@email.com"
+                  required
+                />
+              </div>
+
+              <div class="form-row">
+                <label for="message">Message</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  placeholder="Tell me about your project or opportunity"
+                  required
+                ></textarea>
+              </div>
+
+              <div class="contact-form__actions">
+                <button class="button" type="submit">Send Message</button>
+                <button
+                  class="button button--secondary"
+                  type="button"
+                  id="copy-email"
+                  data-email="arvindg12125@gmail.com"
+                >
+                  Copy Email
+                </button>
+              </div>
+
+              <p class="form-status" id="form-status" aria-live="polite"></p>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-shell">
+        <div>
+          <p class="footer-title">Arvind Kumar</p>
+          <p class="footer-text">AI/ML Developer | Java Developer</p>
+        </div>
+
+        <div class="footer-links">
+          <a
+            href="https://www.linkedin.com/in/arvind-kumar-maurya12125/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            LinkedIn
+          </a>
+          <a href="https://github.com/your-username" target="_blank" rel="noreferrer">
+            GitHub
+          </a>
+          <a href="mailto:arvindg12125@gmail.com">Email</a>
+        </div>
+
+        <p class="footer-text">&copy; <span id="current-year"></span> Arvind Kumar. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
